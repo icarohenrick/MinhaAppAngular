@@ -1,0 +1,20 @@
+<div class="container main-container">
+    <h2>Bar Class teste</h2>
+    <p>Bar: {{barBebida1}}</p>
+
+    <div> Unidade Manual: {{ConfigManual.unidadeId}} | <div> Token Manual: {{ConfigManual.unidadeToken}}</div>
+    <div> Unidade Manual: {{Config.unidadeId}} | <div> Token Manual: {{Config.unidadeToken}}</div>
+    <div> Dados Unidade: {{dadosUnidade}}</div>
+
+    <div>Bar: {{barBebida2}}</div>
+
+    <br>
+
+    <h2>Progress: {{progress}}%</h2>
+    <p *ngIf="progress >= 100">Done processing {{label}} of Angular zone!</p>
+
+    <a href="javascript:void(0)"  class="btn btn-success" (click)="processWithingAngularZone()">
+        processar dentro da zona do Angular</a> &nbsp;
+    <a href="javascript:void(0)"  class="btn btn-danger" (click)="processOutSideOfAngularZone()">
+        processar fora da zona do Angular</a>
+</div>

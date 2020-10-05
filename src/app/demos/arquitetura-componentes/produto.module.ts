@@ -9,16 +9,26 @@ import { ProdutoDetalheComponent } from './componentes/produto-card-detalhe.comp
 
 import { ProdutoRoutingModule } from './produto.route';
 import { ProdutoCountComponent } from './componentes/produto-cout.component';
+import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { ProdutoAppComponent } from './componentes/produto.app.component';
+import { ProdutoService } from './service/produto.service';
+import { ProdutosResolve } from './service/produto.resolve';
 
 @NgModule({
     declarations: [
         ProdutoDashboardComponent,
         ProdutoDetalheComponent,
-        ProdutoCountComponent
+        ProdutoCountComponent,
+        ProdutoAppComponent,
+        EditarProdutoComponent
     ],
     imports: [
         CommonModule,
         ProdutoRoutingModule
+    ],
+    providers: [
+        ProdutoService,
+        ProdutosResolve
     ],
     exports: [
         ProdutoDashboardComponent
